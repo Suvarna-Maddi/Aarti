@@ -1,2 +1,9 @@
 import { Link } from '@tanstack/react-router';
-export function Brand({ light = false }: { light?: boolean }) { return <Link to="/" className={`brand ${light ? 'brand-light' : ''}`} aria-label="HOMORA home"><svg viewBox="0 0 32 40" aria-hidden="true"><path d="M16 36V12M16 23C4 24 2 17 3 12c8 0 13 3 13 11M16 17C26 18 29 10 28 6c-8 0-12 4-12 11M16 12C9 8 10 3 14 0c5 4 7 8 2 12M16 31C25 32 29 26 28 21c-8-1-12 3-12 10M16 31C8 32 3 28 2 23c8-1 13 2 14 8" /></svg><span><strong>HOMORA</strong><small>SPACES WITH A SOUL</small></span></Link>; }
+import artiLogo from '@/assets/arti_logo.png';
+export function Brand({ light = false }: { light?: boolean }) {
+  return (
+    <Link to="/" className={`brand ${light ? 'brand-light' : ''}`} aria-label="Aarti Furnitures home">
+      <img src={artiLogo} alt="Aarti Furnitures" style={{ maxHeight: '40px', height: 'auto', width: 'auto' }} />
+    </Link>
+  );
+}
