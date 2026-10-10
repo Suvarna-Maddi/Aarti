@@ -107,8 +107,8 @@
   z-index: 2;
   display: flex;
   gap: 0;
-  margin-top: 52px;
-  padding: 28px 5%;
+  margin-top: 24px;
+  padding: 24px 5%;
   background: color-mix(in oklch, var(--ivory) 92%, transparent);
   backdrop-filter: blur(6px);
   width: 100vw;
@@ -678,8 +678,8 @@
 
   /* Feature strip: full width at bottom */
   .hero-features-strip {
-    margin-top: 40px;
-    padding: 22px 5%;
+    margin-top: 20px;
+    padding: 18px 5%;
     gap: 0;
   }
 
