@@ -175,18 +175,6 @@ function CustomizationRoute() {
         </div>
       </section>
 
-      {/* ─── CTA ─── */}
-      <section
-        className="custom-cta-new"
-        style={{ backgroundImage: `url(${uniqueIdea})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-      >
-        <div className="cta-content">
-          <span className="eyebrow">CUSTOM FURNITURE</span>
-          <h2>Your Vision.<br />Our Craftsmanship.</h2>
-          <p>Bring your ideas to life with fully customized furniture designed around your space, style and needs.</p>
-          <button className="button">Start Customizing →</button>
-        </div>
-      </section>
     </main>
   );
 }
