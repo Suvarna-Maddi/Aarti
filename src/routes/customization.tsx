@@ -176,8 +176,10 @@ function CustomizationRoute() {
       </section>
 
       {/* ─── CTA ─── */}
-      <section className="custom-cta-new">
-        <img src={uniqueIdea} alt="Furniture sketches and materials" className="cta-background" />
+      <section
+        className="custom-cta-new"
+        style={{ backgroundImage: `url(${uniqueIdea})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+      >
         <div className="cta-content">
           <span className="eyebrow">CUSTOM FURNITURE</span>
           <h2>Your Vision.<br />Our Craftsmanship.</h2>
