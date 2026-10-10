@@ -760,6 +760,7 @@
     grid-template-rows: auto auto auto;
     height: auto;
     border-radius: 0;
+    gap: 5px;
   }
 
   /* Row 1: olive card */
@@ -783,7 +784,7 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-rows: none;
     height: 130px;
-    gap: 0;
+    gap: 5px;
     padding: 0;
   }
 
