@@ -2,14 +2,13 @@ import { Link } from '@tanstack/react-router';
 import { useEffect, useRef, useState } from 'react';
 import {
   ArrowDown, ArrowLeft, ArrowRight, ChevronsLeftRight,
-  Leaf, PackageCheck, PencilRuler, Play,
+  Leaf, PackageCheck, PencilRuler, Play, Truck,
   MapPin, Phone, Star, Award, Calendar, ShieldCheck, Clock, Globe,
 } from 'lucide-react';
 import gsap from 'gsap';
 import { Button } from '@/components/ui/button';
 import { images, categories, money } from '@/data/catalog';
 import { Customizer } from './customizer';
-import thirumalaLogo from '@/assets/thirumala_logo.png';
 const productCategories = [
   { name: 'Sofas and sofa-cum-beds', items: 'Living room seating, recliners & convertible sofa-cum-beds' },
   { name: 'Beds and bedroom furniture', items: 'Single, double, king, storage beds & bedside units' },
@@ -64,7 +63,7 @@ export function HomePage() {
           <div className="hero-promises">
             <span><PackageCheck />Premium Materials</span>
             <span><PencilRuler />Custom Designs</span>
-            <span><img src={thirumalaLogo} alt="Pan India Delivery" className="service-icon" />Pan India Delivery</span>
+            <span><Truck />Pan India Delivery</span>
           </div>
         </div>
         <aside className="hero-rail">

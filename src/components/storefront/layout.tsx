@@ -1,7 +1,6 @@
 import { Link, useRouterState } from '@tanstack/react-router';
 import { useEffect, useState } from 'react';
-import { ArrowRight, Heart, Search, ShoppingCart, Menu, X, Minus, Plus, Truck, PencilRuler, RotateCcw } from 'lucide-react';
-import thirumalaLogo from '@/assets/thirumala_logo.png';
+import { ArrowRight, Heart, Search, ShoppingCart, Menu, X, Minus, Plus, Truck, PencilRuler, RotateCcw, Leaf } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { Brand } from './brand';
@@ -14,7 +13,7 @@ export function Header() {
  useEffect(() => setMenu(false), [pathname]);
  return <><header className={`site-header ${pathname === '/' && !scrolled ? 'over-hero' : 'solid-header'}`}><Brand /><nav className="desktop-nav">{links.map(l => <Link key={l.to} to={l.to} activeProps={{ className: 'active' }} activeOptions={{ exact: true }}>{l.name}</Link>)}</nav><div className="header-actions"><Button variant="tool" size="icon" title="Search" aria-label="Search" onClick={() => setPanel('search')}><Search /></Button><Button variant="tool" size="icon" title="Wishlist" aria-label="Wishlist" onClick={() => setPanel('wishlist')}><Heart /></Button><Button variant="tool" size="icon" title="Shopping bag" aria-label="Shopping bag" onClick={() => setPanel('cart')} className="cart-tool"><ShoppingCart /><span>{cart.reduce((a, b) => a + b.quantity, 0)}</span></Button><Button asChild variant="showroom" className="quote-button"><Link to="/contact">Get a Quote <ArrowRight /></Link></Button><Button variant="tool" size="icon" className="menu-button" aria-label="Open menu" onClick={() => setMenu(true)}><Menu /></Button></div></header><Dialog open={menu} onOpenChange={setMenu}><DialogContent className="mobile-menu"><DialogTitle className="sr-only">Navigation</DialogTitle><Brand /><nav>{links.map((l, i) => <Link key={l.to} to={l.to} onClick={() => setMenu(false)}><small>0{i + 1}</small>{l.name}<ArrowRight /></Link>)}</nav><span className="eyebrow">Thoughtfully made. Beautifully lived.</span></DialogContent></Dialog></>;
 }
-export function Services() { return <div className="service-strip">{[["Sustainable Materials", thirumalaLogo], ["Customizable Designs", PencilRuler], ["Pan India Delivery", Truck], ["Easy Returns", RotateCcw]].map(([label, IconOrSrc]) => { const isImg = typeof IconOrSrc === 'string'; return <div key={String(label)}>{isImg ? <img src={IconOrSrc} alt={label} className="service-icon" /> : (() => { const Symbol = IconOrSrc as typeof PencilRuler; return <Symbol />; })()}<span>{String(label)}</span></div>; })}</div>; }
+export function Services() { return <div className="service-strip">{[["Sustainable Materials", Leaf], ["Customizable Designs", PencilRuler], ["Pan India Delivery", Truck], ["Easy Returns", RotateCcw]].map(([label, Icon]) => <div key={String(label)}><Icon /><span>{String(label)}</span></div>)}</div>; }
 export function Footer() { return <><Services /><footer className="site-footer"><div><Brand light /><p>Furniture designed to make everyday<br />spaces feel extraordinary.</p></div><nav>{links.slice(1).map(l => <Link key={l.to} to={l.to}>{l.name}</Link>)}</nav><div className="footer-note"><span>Made with care. Made to last.</span><small>© {new Date().getFullYear()} Tirumala Furnitures. All rights reserved.</small></div></footer></>; }
 export function StorePanels() {
  const { panel, setPanel, cart, wishlist, changeQuantity, toggleWish, addToCart } = useStore(); const [search, setSearch] = useState('');
