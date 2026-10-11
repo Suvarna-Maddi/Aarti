@@ -1,9 +1,19 @@
 import { Link } from '@tanstack/react-router';
-import artiLogo from '@/assets/arti_logo.png';
+import thirumalaLogo from '@/assets/thirumala_logo.png';
+
 export function Brand({ light = false }: { light?: boolean }) {
   return (
-    <Link to="/" className={`brand ${light ? 'brand-light' : ''}`} aria-label="Aarti Furnitures home">
-      <img src={artiLogo} alt="Aarti Furnitures" style={{ maxHeight: '40px', height: 'auto', width: 'auto' }} />
+    <Link to="/" className={`brand ${light ? 'brand-light' : ''}`} aria-label="Tirumala Furnitures home">
+      <img
+        src={thirumalaLogo}
+        alt="Tirumala Furnitures"
+        className="brand-logo"
+      />
+      <span>
+        <strong>TIRUMALA</strong>
+        <small>FURNITURE MANUFACTURER</small>
+      </span>
     </Link>
   );
 }
+

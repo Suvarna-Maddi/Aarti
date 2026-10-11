@@ -80,9 +80,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "HOMORA — Spaces with a Soul" },
-      { name: "description", content: "Thoughtfully crafted furniture for a beautifully lived home." },
-      { name: "author", content: "HOMORA" },
+      { title: "Tirumala Furnitures — Furniture Manufacturer in Hyderabad" },
+      { name: "description", content: "Tirumala Furnitures: Quality furniture manufacturer in Hyderabad offering sofas, beds, dining sets, office furniture, wardrobes, and custom woodwork." },
+      { name: "author", content: "Tirumala Furnitures" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
