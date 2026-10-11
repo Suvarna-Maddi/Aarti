@@ -10,12 +10,12 @@ import { Button } from '@/components/ui/button';
 import { images, categories, money } from '@/data/catalog';
 import { Customizer } from './customizer';
 const productCategories = [
-  { name: 'Sofas and sofa-cum-beds', items: 'Living room seating, recliners & convertible sofa-cum-beds' },
-  { name: 'Beds and bedroom furniture', items: 'Single, double, king, storage beds & bedside units' },
-  { name: 'Dining tables and chairs', items: 'Solid wood dining sets, contemporary tables & seating' },
-  { name: 'Office chairs and desks', items: 'Ergonomic work chairs, executive desks & study tables' },
-  { name: 'Wardrobes and storage furniture', items: 'Modular wardrobes, dressers & customized storage units' },
-  { name: 'Custom-made furniture', items: 'Bespoke dimensions, premium timber & tailored woodwork' },
+  { name: 'Sofas and recliners', items: 'Living room sofas, premium recliners & convertible modular seating' },
+  { name: 'Beds and bedroom furniture', items: 'King & queen beds, storage beds, bedside tables & wardrobes' },
+  { name: 'Dining tables and chairs', items: 'Solid wood dining sets, marble-top tables & dining chairs' },
+  { name: 'Office furniture', items: 'Ergonomic work chairs, executive desks & conference tables' },
+  { name: 'Home interiors & arrangements', items: 'Complete home interiors, modular kitchens & space planning' },
+  { name: 'Custom furniture & interior projects', items: 'Bespoke custom woodwork, turnkey interior designing & fit-outs' },
 ];
 
 export function HomePage() {
@@ -40,17 +40,17 @@ export function HomePage() {
         <img
           className="hero-photo"
           src={images.living}
-          alt="Sunlit Tirumala Furnitures living room with a handcrafted sofa and woodwork"
+          alt="Sunlit Sai Datta Furnitures & Interiors living room with a handcrafted sofa and woodwork"
           width="1536" height="1024"
           fetchPriority="high"
         />
         <div className="hero-content">
-          <span className="eyebrow">Furniture Manufacturer · Hyderabad</span>
+          <span className="eyebrow">Furniture Showroom · Interior Decoration · Boduppal, Hyderabad</span>
           <h1 className="display">More than<br />furniture,<br /><em>a feeling.</em></h1>
           <p className="hero-copy">
-            Timeless pieces for modern living.<br />
-            Designed to bring warmth, beauty<br />
-            and meaning to your space.
+            Timeless pieces and bespoke interiors for modern living.<br />
+            Designed to bring warmth, luxury<br />
+            and character to your space.
           </p>
           <div className="hero-ctas">
             <Button asChild variant="showroom">
@@ -61,9 +61,9 @@ export function HomePage() {
             </Button>
           </div>
           <div className="hero-promises">
-            <span><PackageCheck />Premium Materials</span>
-            <span><PencilRuler />Custom Designs</span>
-            <span><Truck />Pan India Delivery</span>
+            <span><PackageCheck />Showroom Quality</span>
+            <span><PencilRuler />Custom Interiors</span>
+            <span><Truck />Hyderabad & Beyond</span>
           </div>
         </div>
         <aside className="hero-rail">
@@ -82,16 +82,16 @@ export function HomePage() {
         </aside>
       </section>
 
-      {/* ─── About Tirumala Furnitures ─── */}
-      <section className="about-section" aria-label="About Tirumala Furnitures">
+      {/* ─── About Sai Datta Furnitures & Interiors ─── */}
+      <section className="about-section" aria-label="About Sai Datta Furnitures & Interiors">
         <div className="about-inner">
           {/* Left — story + stats */}
           <div className="about-left">
-            <span className="eyebrow">About Tirumala Furnitures</span>
-            <h2 className="display about-heading">Tirumala Furnitures</h2>
+            <span className="eyebrow">About Our Showroom</span>
+            <h2 className="display about-heading">Sai Datta Furnitures &amp; Interiors</h2>
             <p className="about-tagline">
-              Furniture business listed as a recognized furniture manufacturer in Hyderabad.
-              Providing durable construction, custom designs, and premium furnishings for homes and businesses.
+              Furniture showroom &amp; interior decoration specialists in Boduppal, Hyderabad.
+              Led by N. Laxmi Kumar, offering premium furniture retail, customized home interiors, and architectural woodwork projects.
             </p>
 
             {/* Rating badges */}
@@ -99,15 +99,15 @@ export function HomePage() {
               <div className="rating-badge">
                 <Star className="rating-star" />
                 <div>
-                  <strong>4.8 (19)</strong>
+                  <strong>4.0 (111)</strong>
                   <small>Public Business Rating</small>
                 </div>
               </div>
               <div className="rating-badge">
                 <Award className="rating-star" />
                 <div>
-                  <strong>Manufacturer</strong>
-                  <small>Direct Furniture Workshop</small>
+                  <strong>N. Laxmi Kumar</strong>
+                  <small>Owner &amp; Lead Specialist</small>
                 </div>
               </div>
             </div>
@@ -116,27 +116,27 @@ export function HomePage() {
             <div className="about-facts">
               <div className="fact-item">
                 <Award size={15} />
-                <span>Furniture business · Listed as a furniture manufacturer</span>
+                <span>Business: <strong>Furniture showroom · Interior decoration</strong></span>
               </div>
               <div className="fact-item">
                 <Phone size={15} />
-                <a href="tel:+919666977714" className="fact-link">+91 96669 77714</a>
+                <span>Primary: <a href="tel:+918686065352" className="fact-link">+91 86860 65352</a> · Alt: <a href="tel:04064444352" className="fact-link">040 6444 4352</a></span>
+              </div>
+              <div className="fact-item">
+                <Globe size={15} />
+                <span>Email: <a href="mailto:dattafurniture@gmail.com" className="fact-link">dattafurniture@gmail.com</a> / <a href="mailto:saidatta05@gmail.com" className="fact-link">saidatta05@gmail.com</a></span>
               </div>
               <div className="fact-item">
                 <MapPin size={15} />
-                <span>Plot 09, Krishna Reddy Pet Road, near Krishna Reddy Sweet Shop, Hyderabad, Telangana 502319</span>
+                <span>1-23, NH 163, Raghavendra Nagar Colony, Bhagya Nagar Colony, Boduppal, Hyderabad, Telangana 500092</span>
               </div>
               <div className="fact-item">
                 <Clock size={15} />
                 <span>Listed hours: <strong>Daily, 10:00 AM–9:30 PM</strong></span>
               </div>
-              <div className="fact-item">
-                <Globe size={15} />
-                <span>Official website: <em>Not confirmed</em></span>
-              </div>
               <div className="fact-item" style={{ opacity: 0.75, fontSize: '11px', marginTop: '4px' }}>
                 <ShieldCheck size={14} />
-                <span>Source: Tirumala Furnitures public business listing.</span>
+                <span>Source: <a href="https://www.bharatibiz.com/en/sai-datta-furnitures-interiors-086860-65352" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>Public business listing (BharatiBiz)</a>. Hyderabad.</span>
               </div>
             </div>
           </div>
@@ -144,9 +144,9 @@ export function HomePage() {
           {/* Right — product catalogue */}
           <div className="about-right">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '8px', marginBottom: '4px' }}>
-              <span className="eyebrow">Product Information</span>
+              <span className="eyebrow">Offerings &amp; Services</span>
               <span style={{ fontSize: '11px', color: 'var(--muted-foreground)' }}>
-                Catalogue verification with owner pending
+                Retail Showroom &amp; Interior Decoration
               </span>
             </div>
             <div className="catalogue-grid">
@@ -163,9 +163,9 @@ export function HomePage() {
                   Browse All Products <ArrowRight />
                 </Button>
               </Link>
-              <a href="tel:+919666977714" className="about-cta-link">
+              <a href="tel:+918686065352" className="about-cta-link">
                 <Button variant="showroomOutline" className="about-cta-btn">
-                  <Phone size={14} style={{ marginRight: '6px' }} /> Call +91 96669 77714
+                  <Phone size={14} style={{ marginRight: '6px' }} /> Call +91 86860 65352
                 </Button>
               </a>
             </div>

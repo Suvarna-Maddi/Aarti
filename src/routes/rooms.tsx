@@ -26,7 +26,7 @@ function RoomsRoute() {
     <section className="rooms-hero">
       <img src={living} alt="Warm, thoughtfully furnished living room" width={1536} height={1024} />
       <div className="rooms-hero-shade" />
-      <div className="rooms-hero-copy"><span>ROOMS BY TIRUMALA</span><h1 className="display">Spaces for<br />Every Moment</h1><p>Thoughtfully composed rooms.<br />Designed for the way you live.</p></div>
+      <div className="rooms-hero-copy"><span>ROOMS BY SAI DATTA</span><h1 className="display">Spaces for<br />Every Moment</h1><p>Thoughtfully composed rooms.<br />Designed for the way you live.</p></div>
       <div className="rooms-counter"><strong>01</strong><span>/ 07</span><i /><p>LIVING ROOM</p></div>
     </section>
     <section className="rooms-intro"><span className="eyebrow">ROOM BY ROOM</span><h2 className="display">Find your space.</h2><p>Every room tells a story. Discover furniture and ideas made to bring yours to life.</p></section>
