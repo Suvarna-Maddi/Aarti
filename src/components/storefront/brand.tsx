@@ -1,17 +1,17 @@
 import { Link } from '@tanstack/react-router';
-import saiDattaLogo from '@/assets/sai_datta_logo.png';
+import thirumalaLogo from '@/assets/thirumala_logo.png';
 
 export function Brand({ light = false }: { light?: boolean }) {
   return (
-    <Link to="/" className={`brand ${light ? 'brand-light' : ''}`} aria-label="Sai Datta Furnitures & Interiors home">
+    <Link to="/" className={`brand ${light ? 'brand-light' : ''}`} aria-label="Pooja Furniture home">
       <img
-        src={saiDattaLogo}
-        alt="Sai Datta Furnitures & Interiors"
+        src={thirumalaLogo}
+        alt="Pooja Furniture"
         className="brand-logo"
       />
       <span className="brand-text">
-        <strong className="brand-title">SAI DATTA</strong>
-        <small className="brand-sub">FURNITURES &amp; INTERIORS</small>
+        <strong className="brand-title">POOJA</strong>
+        <small className="brand-sub">FURNITURE · WANAPARTHY</small>
       </span>
     </Link>
   );

@@ -10,12 +10,12 @@ import { Button } from '@/components/ui/button';
 import { images, categories, money } from '@/data/catalog';
 import { Customizer } from './customizer';
 const productCategories = [
-  { name: 'Sofas and recliners', items: 'Living room sofas, premium recliners & convertible modular seating' },
-  { name: 'Beds and bedroom furniture', items: 'King & queen beds, storage beds, bedside tables & wardrobes' },
-  { name: 'Dining tables and chairs', items: 'Solid wood dining sets, marble-top tables & dining chairs' },
-  { name: 'Office furniture', items: 'Ergonomic work chairs, executive desks & conference tables' },
-  { name: 'Home interiors & arrangements', items: 'Complete home interiors, modular kitchens & space planning' },
-  { name: 'Custom furniture & interior projects', items: 'Bespoke custom woodwork, turnkey interior designing & fit-outs' },
+  { name: 'Living Room Furniture', items: 'Sofas, Sofa Sets, L-Shaped Sofas (confirm availability), Recliners & Coffee Tables' },
+  { name: 'Bedroom Furniture', items: 'Beds and Cots, King-Size Beds, Queen-Size Beds, Storage Beds & Wardrobes' },
+  { name: 'Mattresses and Sleep Products', items: 'Comfort Mattresses, Orthopedic Pillows & Premium Sleep Accessories' },
+  { name: 'Study and Home Furniture', items: 'Ergonomic Study Tables, Workstations & Modern Study Furniture' },
+  { name: 'Home Furniture Essentials', items: 'TV Units, Bedside Tables, Dining & Additional Home Furniture' },
+  { name: 'Showroom Services', items: 'Assistance with selection, product recommendations & colour/fabric guidance' },
 ];
 
 export function HomePage() {
@@ -40,41 +40,43 @@ export function HomePage() {
         <img
           className="hero-photo"
           src={images.living}
-          alt="Sunlit Sai Datta Furnitures & Interiors living room with a handcrafted sofa and woodwork"
+          alt="Warm, sunlit Pooja Furniture living room display in Wanaparthy"
           width="1536" height="1024"
           fetchPriority="high"
         />
         <div className="hero-content">
-          <span className="eyebrow">Furniture Showroom · Interior Decoration · Boduppal, Hyderabad</span>
-          <h1 className="display">More than<br />furniture,<br /><em>a feeling.</em></h1>
+          <span className="eyebrow">Furniture Showroom · Wanaparthy, Telangana</span>
+          <h1 className="display">Furniture That Makes<br />a House Feel<br /><em>Like Home.</em></h1>
           <p className="hero-copy">
-            Timeless pieces and bespoke interiors for modern living.<br />
-            Designed to bring warmth, luxury<br />
-            and character to your space.
+            Discover furniture designed to bring comfort, functionality, and style to your living spaces.<br />
+            Explore furniture options for your living room, bedroom, and home.
           </p>
-          <div className="hero-ctas">
+          <div className="hero-ctas" style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <Button asChild variant="showroom">
-              <Link to="/collections">Explore Collection <ArrowRight /></Link>
+              <Link to="/collections">Explore Collections <ArrowRight /></Link>
             </Button>
             <Button asChild variant="showroomOutline">
-              <Link to="/our-story">Watch Our Story <Play /></Link>
+              <Link to="/contact">Contact Us <Phone size={15} style={{ marginLeft: '6px' }} /></Link>
+            </Button>
+            <Button asChild variant="showroomOutline">
+              <Link to="/rooms">Visit Our Showroom <MapPin size={15} style={{ marginLeft: '6px' }} /></Link>
             </Button>
           </div>
           <div className="hero-promises">
-            <span><PackageCheck />Showroom Quality</span>
-            <span><PencilRuler />Custom Interiors</span>
-            <span><Truck />Hyderabad & Beyond</span>
+            <span><PackageCheck />Comfort & Style</span>
+            <span><PencilRuler />Product Guidance</span>
+            <span><Truck />Convenient Showroom</span>
           </div>
         </div>
         <aside className="hero-rail">
           <span className="count">01<br /><small>/ 04</small></span>
           <div className="rail-line" />
-          <p>A Beautiful<br />Home<br />Begins<br />Here.</p>
+          <p>Making<br />Your House<br />Feel Like<br />Home.</p>
           <Button
             variant="tool"
             className="hero-scroll"
             onClick={() => categoriesRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
-            aria-label="Scroll to room collections"
+            aria-label="Scroll to featured collections"
           >
             <ArrowDown />
             <span>SCROLL</span>
@@ -82,32 +84,33 @@ export function HomePage() {
         </aside>
       </section>
 
-      {/* ─── About Sai Datta Furnitures & Interiors ─── */}
-      <section className="about-section" aria-label="About Sai Datta Furnitures & Interiors">
+      {/* ─── About Pooja Furniture ─── */}
+      <section className="about-section" aria-label="About Pooja Furniture">
         <div className="about-inner">
-          {/* Left — story + stats */}
+          {/* Left — story + highlights */}
           <div className="about-left">
-            <span className="eyebrow">About Our Showroom</span>
-            <h2 className="display about-heading">Sai Datta Furnitures &amp; Interiors</h2>
+            <span className="eyebrow">About Pooja Furniture</span>
+            <h2 className="display about-heading">Pooja Furniture</h2>
             <p className="about-tagline">
-              Furniture showroom &amp; interior decoration specialists in Boduppal, Hyderabad.
-              Led by N. Laxmi Kumar, offering premium furniture retail, customized home interiors, and architectural woodwork projects.
+              Welcome to Pooja Furniture, your local destination for home furniture in Wanaparthy.
+              We aim to help customers find furniture that combines comfort, functionality, and style.
+              From living room furniture to bedroom essentials, discover furniture options to suit different spaces, preferences, and budgets.
             </p>
 
-            {/* Rating badges */}
+            {/* Why Choose Pooja Furniture Badges */}
             <div className="about-ratings">
               <div className="rating-badge">
                 <Star className="rating-star" />
                 <div>
-                  <strong>4.0 (111)</strong>
-                  <small>Public Business Rating</small>
+                  <strong>Local Destination</strong>
+                  <small>Wanaparthy Showroom</small>
                 </div>
               </div>
               <div className="rating-badge">
                 <Award className="rating-star" />
                 <div>
-                  <strong>N. Laxmi Kumar</strong>
-                  <small>Owner &amp; Lead Specialist</small>
+                  <strong>Personalized Guidance</strong>
+                  <small>Welcoming Experience</small>
                 </div>
               </div>
             </div>
@@ -116,37 +119,37 @@ export function HomePage() {
             <div className="about-facts">
               <div className="fact-item">
                 <Award size={15} />
-                <span>Business: <strong>Furniture showroom · Interior decoration</strong></span>
+                <span>Business Type: <strong>Furniture Showroom</strong></span>
               </div>
               <div className="fact-item">
                 <Phone size={15} />
-                <span>Primary: <a href="tel:+918686065352" className="fact-link">+91 86860 65352</a> · Alt: <a href="tel:04064444352" className="fact-link">040 6444 4352</a></span>
+                <span>Contact Number: <a href="tel:+918545220050" className="fact-link">+91 85452 20050</a></span>
               </div>
               <div className="fact-item">
                 <Globe size={15} />
-                <span>Email: <a href="mailto:dattafurniture@gmail.com" className="fact-link">dattafurniture@gmail.com</a> / <a href="mailto:saidatta05@gmail.com" className="fact-link">saidatta05@gmail.com</a></span>
+                <span>WhatsApp: <a href="https://wa.me/message/WXDGEWS77CFOF1" target="_blank" rel="noopener noreferrer" className="fact-link" style={{ color: '#25D366' }}>Chat on WhatsApp (Click to enquire)</a></span>
               </div>
               <div className="fact-item">
                 <MapPin size={15} />
-                <span>1-23, NH 163, Raghavendra Nagar Colony, Bhagya Nagar Colony, Boduppal, Hyderabad, Telangana 500092</span>
+                <span>Maremmakunta, Vallabhnagar, Wanaparthy, Telangana – 509103, India</span>
               </div>
               <div className="fact-item">
                 <Clock size={15} />
-                <span>Listed hours: <strong>Daily, 10:00 AM–9:30 PM</strong></span>
+                <span>Opening Hours: <strong>10:00 AM – 9:00 PM (Daily, as listed)</strong></span>
               </div>
-              <div className="fact-item" style={{ opacity: 0.75, fontSize: '11px', marginTop: '4px' }}>
+              <div className="fact-item" style={{ opacity: 0.8, fontSize: '11px', marginTop: '4px' }}>
                 <ShieldCheck size={14} />
-                <span>Source: <a href="https://www.bharatibiz.com/en/sai-datta-furnitures-interiors-086860-65352" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>Public business listing (BharatiBiz)</a>. Hyderabad.</span>
+                <span>Tagline: <strong>Making Your House Feel Like Home.</strong></span>
               </div>
             </div>
           </div>
 
-          {/* Right — product catalogue */}
+          {/* Right — product categories & services */}
           <div className="about-right">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '8px', marginBottom: '4px' }}>
-              <span className="eyebrow">Offerings &amp; Services</span>
+              <span className="eyebrow">Featured Collections &amp; Services</span>
               <span style={{ fontSize: '11px', color: 'var(--muted-foreground)' }}>
-                Retail Showroom &amp; Interior Decoration
+                Wanaparthy Showroom
               </span>
             </div>
             <div className="catalogue-grid">
@@ -157,15 +160,25 @@ export function HomePage() {
                 </div>
               ))}
             </div>
-            <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: '10px', alignItems: 'center', flexWrap: 'wrap' }}>
               <Link to="/collections" className="about-cta-link">
                 <Button variant="showroom" className="about-cta-btn">
-                  Browse All Products <ArrowRight />
+                  Explore Products <ArrowRight />
                 </Button>
               </Link>
-              <a href="tel:+918686065352" className="about-cta-link">
+              <a href="tel:+918545220050" className="about-cta-link">
                 <Button variant="showroomOutline" className="about-cta-btn">
-                  <Phone size={14} style={{ marginRight: '6px' }} /> Call +91 86860 65352
+                  <Phone size={14} style={{ marginRight: '6px' }} /> Call Now
+                </Button>
+              </a>
+              <a href="https://wa.me/message/WXDGEWS77CFOF1" target="_blank" rel="noopener noreferrer" className="about-cta-link">
+                <Button variant="showroomOutline" className="about-cta-btn" style={{ borderColor: '#25D366', color: '#25D366' }}>
+                  WhatsApp Enquiry
+                </Button>
+              </a>
+              <a href="https://maps.google.com/?q=Pooja+Furniture+Maremmakunta+Vallabhnagar+Wanaparthy+Telangana+509103" target="_blank" rel="noopener noreferrer" className="about-cta-link">
+                <Button variant="showroomOutline" className="about-cta-btn">
+                  <MapPin size={14} style={{ marginRight: '6px' }} /> Get Directions
                 </Button>
               </a>
             </div>
